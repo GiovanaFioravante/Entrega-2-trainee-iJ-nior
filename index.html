@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="cabecalho">
+        <div classs href="logo"> G.F.</div>
+        <nav class="menu">
+            <a href="#sobre">Sobre mim</a>
+            <a href="#projetos">Projetos</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="container-principal">
+            <div class="coluna-foto">
+                <img src="assets/desenhoPerfil.png" alt="Desenho de perfil" class="foto-perfil">
+            </div>
+
+            <div class="coluna-texto">
+                <h1>Olá, <br>Sou a Giovana<br>Fioravante</h1>
+                <p class="destaque-bege"> Uma estudante de engenharia que possui milhões de interesses,<br>sendo um deles, programação</p>
+            </div>
+        </section>
+
+        <section id="sobre" class="secao-bloco">
+            <h2>Sobre mim</h2>
+            <div class="sobre-flex">
+                <div class="sobre-texto">
+                    <p>Sou estudante de Engenharia de Sistemas na Universidade Federal de Minas Gerais (UFMG) e muito interessada pela área de tecnologia, com foco em desenvolvimento de software. Atualmente, finalizei o 4º período e sou trainee na iJúnior, 
+                        a empresa júnior de computação da universidade, onde busco aplicar e evoluir minhas habilidades técnicas.
+                        <br><br>Minha trajetória na tecnologia começou no curso de Ciência da Computação, onde estudei por um ano e tive meu primeiro contato com diversas ferramentas e linguagens de programação. Essa base foi fundamental para consolidar 
+                        meu interesse pelo setor.
+                        <br><br>Além da empresa júnior, participo de uma Iniciação Científica focada na integração entre tecnologia e engenharia biomédica. No âmbito extracurricular, atuo na diretoria de esportes da Atlética da 
+                        Escola de Engenharia. Um dos meus hobbys favoritos é praticar esporte, especialmente o vôlei de quadra, que pratico aos finais de semana.
+                    </p>
+                </div>
+
+                <div class="coluna-foto">
+                    <img src="assets/engrenagens.png" alt="Desenho de perfil" class="foto-perfil">
+                </div>
+        </section>
+
+         <section id="projetos" class="secao-bloco">
+            <h2>Meus Projetos (fictícios)</h2>
+            
+            <div class="carrossel-wrapper">
+                
+                <button class="seta" id="seta-esq" aria-label="Anterior">&lt;</button>
+
+                <div class="carrossel" id="carrossel-projetos">
+                    
+                    <div class="card">
+                        <h3>MatchPoint</h3>
+                        <p>Sistema web para gestão de treinos, atletas e campeonatos de atléticas universitárias</p>
+                        <div class="linguagens">
+                            <span class="linguagem">HTML</span>
+                            <span class="linguagem">CSS</span>
+                            <span class="linguagem">JS</span>
+                        </div>
+                        <a href="#" class="botao">Ver Projeto</a>
+                    </div>
+
+                    <div class="card">
+                        <h3>BioData Tracker</h3>
+                        <p>Dashboard interativo que simula o monitoramento de dados e sinais vitais em tempo real</p>
+                        <div class="linguagens">
+                            <span class="linguagem">Python</span>
+                            <span class="linguagem">React</span>
+                        </div>
+                        <a href="#" class="botao">Ver Projeto</a>
+                    </div>
+
+                    <div class="card">
+                        <h3>Vôlei Agendamentos</h3>
+                        <p>API desenvolvida para gerenciamento e reserva de quadras esportivas</p>
+                        <div class="linguagens">
+                            <span class="linguagem">Node.js</span>
+                            <span class="linguagem">Express</span>
+                        </div>
+                        <a href="#" class="botao">Ver Projeto</a>
+                    </div>
+
+                    <div class="card">
+                        <h3>LabSync</h3>
+                        <p>Plataforma para gestão de reagentes e controle de equipamentos de laboratório</p>
+                        <div class="linguagens">
+                            <span class="linguagem">Java</span>
+                            <span class="linguagem">Spring</span>
+                            <span class="linguagem">SQL</span>
+                        </div>
+                        <a href="#" class="botao">Ver Projeto</a>
+                    </div>
+
+                </div>
+
+                <button class="seta" id="seta-dir" aria-label="Próximo">&gt;</button>
+
+            </div>
+
+            <script>
+                const carrossel = document.getElementById('carrossel-projetos');
+                const btnEsq = document.getElementById('seta-esq');
+                const btnDir = document.getElementById('seta-dir');
+
+                btnDir.addEventListener('click', () => {
+                    carrossel.scrollBy({ left: 320, behavior: 'smooth' });
+                });
+
+                btnEsq.addEventListener('click', () => {
+                    carrossel.scrollBy({ left: -320, behavior: 'smooth' });
+                });
+            </script>
+        </section>
+
+
+
+        <section id="contato" class="secao-bloco">
+            <h2>Contato</h2>
+            
+            <div class="contato-grid">
+                <div class="contato-card">
+                    <span class="contato-rotulo">E-MAIL</span>
+                    <span class="contato-valor">giovana.fioravante04@gmail.com</span>
+                </div>
+
+                <div class="contato-card">
+                    <span class="contato-rotulo">INSTAGRAM</span>
+                    <span class="contato-valor">@gifioravante</span>
+                </div>
+
+                <div class="contato-card">
+                    <span class="contato-rotulo">WHATSAPP / TEL</span>
+                    <span class="contato-valor">(31) 99697-0350</span>
+                </div>
+            </div>
+    </section>
+    
+    </main>
+
+</body>
+</html>
