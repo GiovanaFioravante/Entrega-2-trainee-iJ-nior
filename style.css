@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*garante que o padding e bordas nao alterem o tamanho total*/
+}
+
+#projetos {
+    min-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    gap: 4rem; 
+}
+
+#projetos h2 {
+    margin-bottom: 0; 
+}
+
+body{
+    font-family: 'Inter', sans-serif;
+    background-color: #232529;
+    color: #f7e7d4;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.cabecalho{
+    background-color: #232529;
+    padding: 2rem 40px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    color: #e2a775;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.menu{
+    display: flex;
+    gap: 50px;
+}
+
+.menu a{
+    text-decoration: none;
+    color: #a69f96;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.menu a:hover{
+    color: #f7e7d4;
+}
+
+/*conteudo principal*/
+
+.container-principal{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 80px;
+    max-width: 1200px;
+    margin: auto;  /*centraliza o bloco inteiro no espaço que sobra*/
+    padding: 0 40px 40px 40px;
+
+    height: 100vh;
+}
+
+.coluna-foto{
+    flex: 1; /*crescimento proporcional da coluna*/
+    display: flex;
+    justify-content: flex-end; /*alinha foto mais próxima do centro*/
+}
+
+.foto-perfil{
+    max-width: 380px;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.coluna-texto h1{
+    color: #f7e7d4;
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+.destaque-bege{
+    color: #e2a775;
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+
+html{
+    scroll-behavior: smooth;
+}
+
+.secao-bloco{
+    max-width: 1000pc;
+    margin: 0 auto; /*centraliza horizontalmente*/
+    padding: 100px 40px;
+}
+
+.secao-bloco h2 {
+    color:#e2a775;
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+
+.secao-bloco p {
+    color: #a69f96;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+
+.sobre-flex {
+    display: flex;
+    align-items: center;      
+    justify-content: space-between;
+    gap: 60px;                 
+    margin-top: 30px;          
+}
+
+.sobre-texto {
+    flex: 1.6;                 
+    display: flex;
+    flex-direction: column;
+    gap: 16px;                 
+}
+
+.foto-sobre {
+    max-width: 280px;          
+    width: 100%;
+    height: auto;
+}
+
+/*carrossel*/
+.carrossel-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 15px; 
+}
+
+.carrossel {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    width: 100%; 
+}
+
+.card {
+    flex: 0 0 calc((100% - 40px) / 3);
+    min-width: 260px; 
+    
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 { 
+    margin: 0 0 10px 0; 
+    color: #333; 
+}
+
+.card p { 
+    font-size: 0.9rem; 
+    color: #666; 
+    line-height: 1.4; 
+    margin-bottom: 15px;
+}
+
+.seta {
+    background-color: #e2a87500;
+    color: #e2a775;
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    font-size: 1.4rem;
+    font-weight: bold;
+    cursor: pointer;
+    flex-shrink: 0; 
+    transition: all 0.2s ease;
+}
+
+.seta:hover {
+    background-color: #f7e7d4;
+    transform: scale(1.1);
+}
+
+.linguagens {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;       /* Se houver muitas linguagens, joga para a linha de baixo */
+    margin-bottom: 15px;
+}
+
+.linguagem {
+    background: #f0f2f5;   
+    color: #333;           
+    font-size: 0.75rem;
+    padding: 4px 10px;
+    border-radius: 20px;  
+    font-weight: 600;
+}
+
+.botao {
+    display: block;
+    text-align: center;
+    background: #e2a775;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    transition: background 0.2s ease;
+}
+
+.botao:hover {
+    background: #c06311; 
+}
+.contato-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 30px; 
+}
+
+.contato-card {
+    flex: 1;
+    min-width: 240px;
+    
+    background-color: #2b2e35;
+    border: 1px solid #36393f;
+    border-radius: 12px;
+    padding: 24px;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.contato-rotulo {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #e2a775;
+    letter-spacing: 1.5px;
+}
+
+.contato-valor {
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: #f7e7d4;
+    word-break: break-all;
+}
